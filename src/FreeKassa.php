@@ -71,14 +71,14 @@ class FreeKassa
 
         // Payment currency
         if (! is_null(config('freekassa.currency'))) {
-            $query['i'] = config('freekassa.currency');
+            $query['currency'] = config('freekassa.currency');
         }
 
         $query['s'] = $this->getFormSignature(
             config('freekassa.project_id'),
             $amount,
             config('freekassa.secret_key'), $order_id,
-            $query['i'] || 'RUB'
+            $query['currency'] || 'RUB'
         );
 
         // Merge url ang query and return
