@@ -21,7 +21,7 @@ trait CallerTrait
             throw new InvalidSearchOrder();
         }
 
-        return App::call(config('freekassa.searchOrder'), [$request->input('merchant_id')]);
+        return App::call(config('freekassa.searchOrder'), [$request->input('MERCHANT_ORDER_ID')]);
     }
 
     /**
