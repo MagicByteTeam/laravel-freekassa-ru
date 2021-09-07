@@ -1,0 +1,35 @@
+{
+    "name": "weishaypt/laravel-freekassa-ru",
+    "description": "freekassa.ru payments for Laravel",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "weishaypt",
+            "email": "ya@sanek.dev"
+        }
+    ],
+    "require": {
+        "php": ">=7.2",
+        "laravel/framework": "6.*",
+        "guzzlehttp/guzzle": "~6.2"
+    },
+    "autoload": {
+        "psr-4": {
+            "Weishaypt\\FreeKassa\\Facades\\": "src/Facades",
+            "Weishaypt\\FreeKassa\\": "src"
+        }
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Weishaypt\\FreeKassa\\FreeKassaServiceProvider"
+            ],
+            "aliases": {
+                "FreeKassa": "Weishaypt\\FreeKassa\\Facades\\FreeKassa"
+            }
+        }
+    }
+}
