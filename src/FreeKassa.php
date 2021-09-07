@@ -78,7 +78,7 @@ class FreeKassa
             config('freekassa.project_id'),
             $amount,
             config('freekassa.secret_key'), $order_id,
-            $query['currency'] || 'RUB'
+            isset($query['currency']) ? $query['currency'] : 'RUB'
         );
 
         // Merge url ang query and return
