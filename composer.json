@@ -10,8 +10,7 @@
     ],
     "require": {
         "php": ">=7.2",
-        "laravel/framework": "6.*",
-        "guzzlehttp/guzzle": "~6.2"
+        "laravel/framework": "6.*"
     },
     "autoload": {
         "psr-4": {
